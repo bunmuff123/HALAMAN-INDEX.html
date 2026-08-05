@@ -3,175 +3,191 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fashion Store</title>
+
+<title>PinkAura Fashion</title>
 
 <style>
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',Arial,sans-serif;
 }
 
 body{
-background:#f5f5f5;
+    background:#fff5fa;
+    color:#555;
 }
+
+
+/* NAVBAR */
 
 header{
-background:#111;
-color:white;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 40px;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    position:sticky;
+    top:0;
+    z-index:10;
+    box-shadow:0 3px 15px #ddd;
 }
 
-header h1{
-color:#ffcc00;
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#ff4fa3;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
+    text-decoration:none;
+    color:#555;
+    margin:0 15px;
 }
+
+nav a:hover{
+    color:#ff4fa3;
+}
+
+
+/* HERO */
 
 .hero{
-background:linear-gradient(to right,#111,#555);
-color:white;
-text-align:center;
-padding:60px 20px;
+
+    height:500px;
+    background:
+    linear-gradient(
+    rgba(255,182,215,.8),
+    rgba(255,240,248,.9)
+    ),
+    url("https://via.placeholder.com/1200x500");
+
+    background-size:cover;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
 }
 
-.hero button{
-padding:12px 25px;
-margin-top:20px;
-background:#ffcc00;
-border:none;
-font-size:16px;
-cursor:pointer;
-border-radius:8px;
+
+.hero h1{
+
+    font-size:50px;
+    color:#d63384;
+
 }
 
-.hero button:hover{
-background:orange;
+
+.hero p{
+
+    font-size:20px;
+    margin:20px;
+
 }
 
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-padding:40px;
+
+.btn{
+
+    background:#ff4fa3;
+    color:white;
+    padding:15px 35px;
+    border-radius:30px;
+    text-decoration:none;
+
 }
+
+
+/* SEARCH */
+
+.search{
+
+    padding:30px;
+    text-align:center;
+
+}
+
+
+.search input{
+
+    width:60%;
+    padding:15px;
+    border-radius:30px;
+    border:2px solid #ffb6d9;
+
+}
+
+
+
+/* KATEGORI */
+
+.kategori{
+
+    padding:40px 8%;
+    text-align:center;
+
+}
+
+
+.kategori-box{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+
+}
+
+
+.kategori-item{
+
+    background:white;
+    width:180px;
+    padding:25px;
+    border-radius:20px;
+
+    box-shadow:0 5px 15px #ddd;
+
+    color:#ff4fa3;
+
+}
+
+
+
+/* PRODUK */
+
+
+.produk{
+
+    padding:50px 8%;
+
+}
+
+
+.produk h2{
+
+    text-align:center;
+    color:#d63384;
+    margin-bottom:40px;
+
+}
+
+
+.container{
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+
+}
+
+
 
 .card{
-background:white;
-padding:15px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,.2);
-text-align:center;
-transition:0.3s;
-}
 
-.card:hover{
-transform:scale(1.05);
-}
-
-.card img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:10px;
-}
-
-.price{
-color:red;
-font-size:20px;
-margin:10px;
-}
-
-button{
-padding:10px 20px;
-background:#111;
-color:white;
-border:none;
-cursor:pointer;
-border-radius:5px;
-}
-
-button:hover{
-background:#ff9900;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:20px;
-}
-</style>
-
-</head>
-<body>
-
-<header>
-<h1>Fashion Store</h1>
-
-<nav>
-<a href="#">Home</a>
-<a href="#">Produk</a>
-<a href="#">Promo</a>
-<a href="#">Kontak</a>
-</nav>
-</header>
-
-<section class="hero">
-<h2>Selamat Datang di Fashion Store</h2>
-<p>Temukan baju fashion terbaru dengan harga terbaik.</p>
-<button onclick="promo()">Lihat Promo</button>
-</section>
-
-<section class="products">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600" alt="">
-<h3>Kaos Casual</h3>
-<p class="price">Rp120.000</p>
-<button onclick="beli('Kaos Casual')">Beli</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600" alt="">
-<h3>Jaket Hoodie</h3>
-<p class="price">Rp250.000</p>
-<button onclick="beli('Jaket Hoodie')">Beli</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600" alt="">
-<h3>Dress Wanita</h3>
-<p class="price">Rp300.000</p>
-<button onclick="beli('Dress Wanita')">Beli</button>
-</div>
-
-</section>
-
-<footer>
-<p>© 2026 Fashion Store | Tugas Mockup E-Commerce</p>
-</footer>
-
-<script>
-
-function beli(nama){
-alert("Produk " + nama + " berhasil dimasukkan ke keranjang.");
-}
-
-function promo(){
-alert("🎉 Promo Hari Ini!\nDiskon 30% untuk semua produk.");
-}
-
-</script>
-
-</body>
-</html>
+    width:
