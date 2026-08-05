@@ -1,21 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Website Pertama</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Halo, Selamat Datang!</h1>
-    <p>Ini website pertama saya di GitHub Pages.</p>
+
+<header>
+    <h1>👕 Fashion Store</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Produk</a>
+        <a href="#">Tentang</a>
+        <a href="#">Kontak</a>
+    </nav>
+
+    <div class="cart">
+        🛒 Keranjang :
+        <span id="cart-count">0</span>
+    </div>
+</header>
+
+<section class="hero">
+    <h2>Promo Baju Terbaru</h2>
+    <p>Diskon hingga 50%</p>
+    <button>Lihat Produk</button>
+</section>
+
+<section class="products">
+
+<div class="card">
+<img src="images/baju1.jpg" alt="">
+<h3>Kaos Oversize</h3>
+<p>Rp120.000</p>
+<button onclick="addCart()">Tambah ke Keranjang</button>
+</div>
+
+<div class="card">
+<img src="images/baju2.jpg" alt="">
+<h3>Hoodie Premium</h3>
+<p>Rp250.000</p>
+<button onclick="addCart()">Tambah ke Keranjang</button>
+</div>
+
+<div class="card">
+<img src="images/baju3.jpg" alt="">
+<h3>Kemeja Pria</h3>
+<p>Rp180.000</p>
+<button onclick="addCart()">Tambah ke Keranjang</button>
+</div>
+
+<div class="card">
+<img src="images/baju4.jpg" alt="">
+<h3>Jaket Denim</h3>
+<p>Rp320.000</p>
+<button onclick="addCart()">Tambah ke Keranjang</button>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Fashion Store</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
-body{
-    background:#1e293b;
-    color:white;
-    font-family:Arial,sans-serif;
-    text-align:center;
-    padding-top:100px;
-}
-
-h1{
-    color:#38bdf8;
-}
